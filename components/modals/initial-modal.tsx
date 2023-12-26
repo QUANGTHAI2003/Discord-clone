@@ -1,5 +1,6 @@
 "use client";
 
+import { FileUpload } from "@/components/file-upload";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -12,7 +13,7 @@ import {
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
@@ -66,7 +67,7 @@ export const InitialModal = () => {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
             <div className="space-y-8 px-6">
               <div className="flex items-center justify-center text-center">
-                {/* <FormField
+                <FormField
                   control={form.control}
                   name="imageUrl"
                   render={({ field }) => (
@@ -80,7 +81,7 @@ export const InitialModal = () => {
                       </FormControl>
                     </FormItem>
                   )}
-                /> */}
+                />
               </div>
 
               <FormField
