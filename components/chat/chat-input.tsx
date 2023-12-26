@@ -8,6 +8,7 @@ import qs from "query-string";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
+import { EmojiPicker } from '@/components/emoji-picker';
 import {
   Form,
   FormControl,
@@ -86,9 +87,9 @@ export const ChatInput = ({
                     {...field}
                   />
                   <div className="absolute top-7 right-8">
-                    {/* <EmojiPicker
+                    <EmojiPicker
                       onChange={(emoji: string) => field.onChange(`${field.value} ${emoji}`)}
-                    /> */}
+                    />
                   </div>
                 </div>
               </FormControl>
